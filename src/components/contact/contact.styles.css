@@ -1,0 +1,66 @@
+#contacts-div
+{
+    text-align: center;
+    height: 100vh;
+    padding-top: 100px;
+    width: 70%;
+    margin:auto;
+}
+
+.footer-message
+{
+    Font-Family: 'Roboto', Sans-Serif !important;
+    font-size: calc(22px + (40 - 22) * ((100vw - 300px) / (1600 - 300)));
+    margin-bottom: 200px;
+}
+
+#icons-div
+{
+    width: 70%;
+    margin: auto;
+}
+
+.icon
+{
+    color: white;
+    margin: 20px;
+}
+
+.gmail-icon:hover
+{
+    color: #EA4335;
+}
+
+.instagram-icon:hover
+{
+    color: #C13584;
+}
+
+.linkedin-icon:hover
+{
+    color: #0e76a8;
+}
+
+.facebook-icon:hover
+{
+    color: #1877f2;
+}
+
+@media (max-width: 700px)
+{
+
+    #contacts-div
+    {
+        width: 90%;
+    }
+
+    #icons-div
+    {
+        width: 100%;
+    }
+
+    .icon
+    {
+        font-size: 50px !important;
+    }
+}

@@ -1,0 +1,21 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background-color: black !important;
+    color: white !important;
+}
+
+body::-webkit-scrollbar
+{
+    width: 6px;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    background-color: red;
+    border-radius: 20px;
+}

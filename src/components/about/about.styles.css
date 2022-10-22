@@ -1,0 +1,81 @@
+#about-me
+{
+    margin: 200px 0;
+}
+
+.about-me-div
+{
+    width: 90%;
+    margin: auto;
+}
+
+#about-me-heading
+{
+    Font-Family: 'PT Sans', Sans-Serif !important;
+    Font-Size: 50px !important;
+    margin-bottom: 50px;
+    padding-top: 50px;
+}
+
+.my-image
+{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.about-me-sub-heading
+{
+    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.about-me-description
+{
+    font-size: calc(17px + (23 - 17) * ((100vw - 300px) / (1600 - 300)));
+    margin-top: 30px;
+}
+
+@media (max-width: 768px)
+{
+    .my-image
+    {
+        width: 250px;
+        height: auto;
+    }
+}
+
+.html-word
+{
+    color: #e34c26;
+}
+
+.css-word
+{
+    color: #264de4;
+}
+
+.javascript-word
+{
+    color: #f0db4f;
+}
+
+.java-word
+{
+    color: 	#f89820;
+}
+
+.react-word
+{
+    color: #61DBFB;
+}
+
+.node-word
+{
+    color: #3c873a;
+}
+
+.mongodb-word
+{
+    color: #3FA037;
+}
