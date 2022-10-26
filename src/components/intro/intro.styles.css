@@ -33,3 +33,11 @@
     height: 90%;
     width: 40%;
 }
+
+@media (max-width: 768px)
+{
+    #intro-div
+    {
+        margin: 150px auto;
+    }
+}

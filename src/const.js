@@ -47,7 +47,6 @@ export const project_list = [
             "This website to tell a little bit about who I am.",
         project_link_1:
             "https://github.com/Geralt-Of-Rivia-Witcher/portfolio_2.0/",
-        project_link_2: "https://www.siddhantkumarsingh.me/",
         class: "card sixth",
     },
 ];
