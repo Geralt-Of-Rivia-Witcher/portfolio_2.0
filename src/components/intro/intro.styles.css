@@ -1,32 +1,27 @@
-#intro
-{
+#intro {
     height: 100vh;
     text-align: left;
     overflow: hidden;
 }
 
-#intro-div
-{
+#intro-div {
     width: 70%;
     margin: 250px auto;
     letter-spacing: 0.25rem;
 }
 
-.heading
-{
-    Font-Family: 'PT Sans', Sans-Serif;
+.heading {
+    font-family: "PT Sans", Sans-Serif;
     font-size: calc(31px + (100 - 31) * ((100vw - 300px) / (1600 - 300)));
 }
 
-.sub-heading
-{
-    Font-Family: 'Playfair Display', Serif;
+.sub-heading {
+    font-family: "Playfair Display", Serif;
     font-size: calc(16px + (28 - 16) * ((100vw - 300px) / (1600 - 300)));
     font-weight: 600;
 }
 
-.robot
-{
+.robot {
     position: absolute;
     right: 0;
     top: 2%;
@@ -34,10 +29,8 @@
     width: 40%;
 }
 
-@media (max-width: 768px)
-{
-    #intro-div
-    {
+@media (max-width: 768px) {
+    #intro-div {
         margin: 150px auto;
     }
 }

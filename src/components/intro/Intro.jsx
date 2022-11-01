@@ -3,7 +3,7 @@ import Spline from "@splinetool/react-spline";
 
 import "./intro.styles.css";
 
-const Intro = (props) => {
+const Intro = () => {
     return (
         <section id="intro">
             <div id="intro-div">
@@ -21,7 +21,7 @@ const Intro = (props) => {
                             scene="https://prod.spline.design/pISt2swXwZjPT8YZ/scene.splinecode"
                             lookAt={MouseEvent}
                             onLoad={() => {
-                                props.setLoading(false);
+                                console.log("Hey, Sup???");
                             }}
                         />
                     </div>

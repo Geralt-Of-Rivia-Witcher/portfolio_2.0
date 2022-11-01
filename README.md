@@ -38,7 +38,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is my portfolio website.
+This is my portfolio website. </br>
+The robot model in the intro section is from  <a href="https://spline.design/">Spline</a>.
 
 ### Built With
 [<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">](https://reactjs.org/)
