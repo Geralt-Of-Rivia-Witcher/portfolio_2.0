@@ -4,15 +4,15 @@ import Spline from "@splinetool/react-spline";
 import "./intro.styles.css";
 
 const Intro = () => {
-    return (
-        <section id="intro">
-            <div id="intro-div">
-                <h1 className="heading">
-                    Hey!
-                    <br /> I'm Siddhant
-                </h1>
-                <br />
-                <p className="sub-heading">
+  return (
+    <section id="intro">
+      <div id="intro-div">
+        <h1 className="heading">
+          Hey!
+          <br /> I'm Siddhant
+        </h1>
+        <br />
+        {/* <p className="sub-heading">
                     A programmer and a <strong>MERN</strong> Stack Developer.
                 </p>
                 {window.innerWidth > 768 ? (
@@ -25,10 +25,10 @@ const Intro = () => {
                             }}
                         />
                     </div>
-                ) : null}
-            </div>
-        </section>
-    );
+                ) : null} */}
+      </div>
+    </section>
+  );
 };
 
 export default Intro;
