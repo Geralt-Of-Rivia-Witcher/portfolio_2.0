@@ -6,17 +6,17 @@ import Contact from "./components/contact/Contact";
 import Background from "./components/background/Background";
 
 const App = () => {
-    return (
-        <>
-            <Background />
+  return (
+    <>
+      <Background />
 
-            <Navbar />
-            <Intro />
-            <Projects />
-            <About />
-            <Contact />
-        </>
-    );
+      <Navbar />
+      <Intro />
+      <Projects />
+      <About />
+      <Contact />
+    </>
+  );
 };
 
 export default App;

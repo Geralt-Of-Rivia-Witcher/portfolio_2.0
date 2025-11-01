@@ -1,66 +1,47 @@
-#contacts-div
-{
-    text-align: center;
-    height: 100vh;
-    padding-top: 100px;
-    width: 70%;
-    margin:auto;
+#contacts-div {
+  text-align: center;
+  min-height: 70vh;
+  padding-top: 60px;
+  width: 70%;
+  margin: auto;
 }
 
-.footer-message
-{
-    Font-Family: 'Roboto', Sans-Serif !important;
-    font-size: calc(22px + (40 - 22) * ((100vw - 300px) / (1600 - 300)));
-    margin-bottom: 200px;
+.footer-message {
+  font-family: "Roboto", Sans-Serif !important;
+  font-size: 20px;
+  color: var(--muted);
+  margin-bottom: 60px;
 }
 
-#icons-div
-{
-    width: 70%;
-    margin: auto;
+#icons-div {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
-.icon
-{
-    color: white;
-    margin: 20px;
+.icon {
+  color: var(--muted);
+  margin: 18px;
+  transition: transform 0.14s, color 0.14s;
 }
 
-.gmail-icon:hover
-{
-    color: #EA4335;
+.icon:hover {
+  transform: translateY(-6px);
+  color: var(--neon-cyan);
+  filter: drop-shadow(0 8px 28px rgba(0, 255, 225, 0.06));
 }
 
-.instagram-icon:hover
-{
-    color: #C13584;
-}
-
-.linkedin-icon:hover
-{
-    color: #0e76a8;
-}
-
-.facebook-icon:hover
-{
-    color: #1877f2;
-}
-
-@media (max-width: 700px)
-{
-
-    #contacts-div
-    {
-        width: 90%;
-    }
-
-    #icons-div
-    {
-        width: 100%;
-    }
-
-    .icon
-    {
-        font-size: 50px !important;
-    }
+@media (max-width: 700px) {
+  #contacts-div {
+    width: 90%;
+  }
+  #icons-div {
+    width: 100%;
+  }
+  .icon {
+    font-size: 48px !important;
+  }
 }

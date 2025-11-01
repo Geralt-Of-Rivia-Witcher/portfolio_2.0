@@ -8,9 +8,17 @@ const Intro = () => {
       <div id="intro-div">
         <h1 className="heading">
           Hey!
-          <br /> I'm Siddhant
+          <br /> <span className="name">I'm Siddhant</span>
         </h1>
-        <br />
+        <p className="sub-heading">Software Engineer • Avid gamer</p>
+        <div className="cta-row">
+          <a href="#projects" className="cta">
+            See projects
+          </a>
+          <a href="#contact" className="cta ghost">
+            Get in touch
+          </a>
+        </div>
         {/* <p className="sub-heading">
                     A programmer and a <strong>MERN</strong> Stack Developer.
                 </p>

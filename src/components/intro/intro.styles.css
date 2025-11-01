@@ -1,36 +1,84 @@
 #intro {
-    height: 100vh;
-    text-align: left;
-    overflow: hidden;
+  height: 100vh;
+  text-align: left;
+  overflow: hidden;
 }
 
 #intro-div {
-    width: 70%;
-    margin: 250px auto;
-    letter-spacing: 0.25rem;
+  width: 70%;
+  margin: 220px auto;
+  letter-spacing: 0.08rem;
 }
 
 .heading {
-    font-family: "PT Sans", Sans-Serif;
-    font-size: calc(31px + (100 - 31) * ((100vw - 300px) / (1600 - 300)));
+  font-family: "PT Sans", Sans-Serif;
+  font-size: calc(34px + (96 - 34) * ((100vw - 300px) / (1600 - 300)));
+  color: white;
+  line-height: 1.02;
+  letter-spacing: 1px;
+  text-shadow: 0 6px 30px rgba(0, 0, 0, 0.7), 0 0 18px rgba(122, 252, 255, 0.04);
 }
 
 .sub-heading {
-    font-family: "Playfair Display", Serif;
-    font-size: calc(16px + (28 - 16) * ((100vw - 300px) / (1600 - 300)));
-    font-weight: 600;
+  font-family: "Playfair Display", Serif;
+  font-size: calc(16px + (28 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: 600;
 }
 
 .robot {
-    position: absolute;
-    right: 0;
-    top: 2%;
-    height: 90%;
-    width: 40%;
+  position: absolute;
+  right: 0;
+  top: 2%;
+  height: 90%;
+  width: 40%;
 }
 
 @media (max-width: 768px) {
-    #intro-div {
-        margin: 150px auto;
-    }
+  #intro-div {
+    margin: 150px auto;
+  }
+}
+
+.name {
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sub-heading {
+  color: var(--muted);
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.cta-row {
+  margin-top: 28px;
+  display: flex;
+  gap: 14px;
+}
+.cta {
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--neon-cyan), #6ef8ff);
+  color: #03050a;
+  text-decoration: none;
+  font-weight: 700;
+}
+.cta.ghost {
+  background: transparent;
+  color: var(--neon-cyan);
+  border: 1px solid rgba(122, 252, 255, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 720px) {
+  #intro-div {
+    width: 90%;
+    margin: 140px auto;
+  }
+  .cta-row {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

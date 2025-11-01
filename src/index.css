@@ -1,17 +1,59 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: black !important;
-    color: white !important;
+  background-color: #050507 !important;
+  color: #e6f0ff !important;
+  font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system,
+    "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body::-webkit-scrollbar {
-    width: 6px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: red;
-    border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 255, 215, 0.15),
+    rgba(255, 0, 200, 0.08)
+  );
+  border-radius: 20px;
+}
+
+:root {
+  --bg: #050507;
+  --muted: #9aa7be;
+  --neon-cyan: #00ffe1;
+  --neon-magenta: #ff3cac;
+  --accent: #7afcff;
+}
+
+/* small helpers */
+.container-wide {
+  width: 85%;
+  margin: 0 auto;
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+}
+
+/* smooth transitions */
+* {
+  transition: color 0.15s ease, background 0.2s ease, transform 0.18s ease;
+}
+
+/* offset anchor scrolling for fixed navbar */
+section {
+  scroll-margin-top: 88px;
+}
+@media (max-width: 720px) {
+  section {
+    scroll-margin-top: 72px;
+  }
 }
