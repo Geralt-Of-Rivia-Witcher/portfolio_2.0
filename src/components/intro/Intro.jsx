@@ -5,34 +5,38 @@ import "./intro.styles.css";
 const Intro = () => {
   return (
     <section id="intro">
-      <div id="intro-div">
+      <div id="intro-div" className="container-wide">
+        <p className="intro-chip">Siddhant Kumar Singh · Backend Engineer</p>
         <h1 className="heading">
-          Hey!
-          <br /> <span className="name">I'm Siddhant</span>
+          I build resilient backend systems that stay fast under real-world
+          load.
         </h1>
-        <p className="sub-heading">Software Engineer • Avid gamer</p>
+        <p className="sub-heading">
+          I optimize services, improve performance, and ship reliable backend
+          products with measurable impact.
+        </p>
         <div className="cta-row">
           <a href="#projects" className="cta">
-            See projects
+            Projects
           </a>
           <a href="#contact" className="cta ghost">
-            Get in touch
+            Let&apos;s Work Together
           </a>
         </div>
-        {/* <p className="sub-heading">
-                    A programmer and a <strong>MERN</strong> Stack Developer.
-                </p>
-                {window.innerWidth > 768 ? (
-                    <div className="robot">
-                        <Spline
-                            scene="https://prod.spline.design/pISt2swXwZjPT8YZ/scene.splinecode"
-                            lookAt={MouseEvent}
-                            onLoad={() => {
-                                console.log("Hey, Sup???");
-                            }}
-                        />
-                    </div>
-                ) : null} */}
+        <div className="intro-metrics glass-card">
+          <div>
+            <span className="metric-value">2+ Years</span>
+            <span className="metric-label">Backend Engineering</span>
+          </div>
+          <div>
+            <span className="metric-value">5+</span>
+            <span className="metric-label">Production Services</span>
+          </div>
+          <div>
+            <span className="metric-value">Ownership</span>
+            <span className="metric-label">Execution Focused</span>
+          </div>
+        </div>
       </div>
     </section>
   );

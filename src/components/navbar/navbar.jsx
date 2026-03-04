@@ -6,7 +6,6 @@ const Navbar = () => {
   return (
     <nav className="site-navbar fixed-top" id="navbar">
       <div className="nav-inner container-wide">
-        <div className="nav-brand"></div>
         <div className="nav-links">
           <a className="nav-link" href="#intro">
             Intro

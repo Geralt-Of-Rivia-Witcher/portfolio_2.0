@@ -1,47 +1,68 @@
+#contact {
+  padding: var(--section-gap) 0 56px;
+}
+
 #contacts-div {
   text-align: center;
-  min-height: 70vh;
-  padding-top: 60px;
-  width: 70%;
-  margin: auto;
+  padding: 34px 28px;
+}
+
+.contact-heading {
+  font-size: clamp(28px, 3vw, 38px);
+  color: var(--text);
+  margin-bottom: 12px;
 }
 
 .footer-message {
-  font-family: "Roboto", Sans-Serif !important;
-  font-size: 20px;
-  color: var(--muted);
-  margin-bottom: 60px;
+  font-size: 17px;
+  color: var(--text-muted);
+  margin: 0 auto 24px;
+  max-width: 60ch;
+  line-height: 1.6;
 }
 
 #icons-div {
-  width: 70%;
-  margin: auto;
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
-.icon {
-  color: var(--muted);
-  margin: 18px;
-  transition: transform 0.14s, color 0.14s;
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.icon:hover {
-  transform: translateY(-6px);
-  color: var(--neon-cyan);
-  filter: drop-shadow(0 8px 28px rgba(0, 255, 225, 0.06));
+.icon {
+  font-size: 18px;
+  color: var(--accent);
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.social-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 @media (max-width: 700px) {
   #contacts-div {
-    width: 90%;
+    padding: 28px 16px;
   }
-  #icons-div {
+
+  .social-link {
     width: 100%;
-  }
-  .icon {
-    font-size: 48px !important;
+    justify-content: center;
   }
 }

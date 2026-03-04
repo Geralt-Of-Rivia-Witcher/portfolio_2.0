@@ -1,59 +1,113 @@
+:root {
+  --bg: #0b1017;
+  --bg-elevated: #121a24;
+  --surface: rgba(20, 29, 40, 0.72);
+  --border: rgba(255, 255, 255, 0.09);
+  --text: #f2f6fc;
+  --text-muted: #a4b0c0;
+  --accent: #5de2d4;
+  --accent-2: #6cb8ff;
+  --shadow: 0 20px 52px rgba(4, 9, 18, 0.5);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --section-gap: 112px;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #050507 !important;
-  color: #e6f0ff !important;
-  font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system,
-    "Helvetica Neue", Arial;
+  margin: 0;
+  color: var(--text);
+  font-family: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: radial-gradient(
+      1200px 700px at 82% -10%,
+      rgba(108, 184, 255, 0.16),
+      transparent 65%
+    ),
+    radial-gradient(
+      900px 500px at 10% 12%,
+      rgba(93, 226, 212, 0.16),
+      transparent 70%
+    ),
+    linear-gradient(165deg, #0b1017 0%, #111826 55%, #0f1521 100%);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
   background: linear-gradient(
     180deg,
-    rgba(0, 255, 215, 0.15),
-    rgba(255, 0, 200, 0.08)
+    rgba(93, 226, 212, 0.35),
+    rgba(108, 184, 255, 0.22)
   );
   border-radius: 20px;
 }
 
-:root {
-  --bg: #050507;
-  --muted: #9aa7be;
-  --neon-cyan: #00ffe1;
-  --neon-magenta: #ff3cac;
-  --accent: #7afcff;
+a,
+button {
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-/* small helpers */
+section {
+  scroll-margin-top: 96px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: "Sora", "Segoe UI", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0;
+}
+
 .container-wide {
-  width: 85%;
+  width: min(1120px, 90%);
   margin: 0 auto;
 }
+
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(6px);
-  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
 }
 
-/* smooth transitions */
-* {
-  transition: color 0.15s ease, background 0.2s ease, transform 0.18s ease;
-}
-
-/* offset anchor scrolling for fixed navbar */
-section {
-  scroll-margin-top: 88px;
-}
 @media (max-width: 720px) {
+  :root {
+    --section-gap: 88px;
+  }
+
   section {
-    scroll-margin-top: 72px;
+    scroll-margin-top: 78px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }

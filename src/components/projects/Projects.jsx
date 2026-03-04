@@ -10,8 +10,10 @@ const Projects = () => {
     <section id="projects">
       <div id="projects-div">
         <div className="projects-header">
-          <h3 id="projects-heading">Selected Projects</h3>
-          <p className="projects-sub">Tools, and demos — curated.</p>
+          <h3 id="projects-heading">Selected Work</h3>
+          <p className="projects-sub">
+            Backend-heavy products built for reliability, clarity, and speed.
+          </p>
         </div>
 
         <Grid container spacing={3} className="project-grid">
@@ -20,9 +22,10 @@ const Projects = () => {
               key={index}
               project_name={each_project.project_name}
               project_description={each_project.project_description}
+              stack={each_project.stack}
+              highlight={each_project.highlight}
               project_link_1={each_project.project_link_1}
               project_link_2={each_project.project_link_2}
-              class={each_project.class}
             />
           ))}
         </Grid>

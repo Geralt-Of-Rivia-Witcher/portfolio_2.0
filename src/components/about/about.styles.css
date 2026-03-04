@@ -1,73 +1,82 @@
 #about-me {
-  margin: 120px 0 60px;
+  margin: var(--section-gap) 0 0;
 }
 
 .about-me-div {
-  width: 90%;
-  margin: auto;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 #about-me-heading {
-  font-family: "PT Sans", Sans-Serif !important;
-  font-size: 44px !important;
-  margin-bottom: 30px;
-  padding-top: 10px;
-  color: var(--neon-magenta);
+  font-size: clamp(30px, 3.4vw, 44px);
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.about-image-wrap {
+  padding: 14px;
+  display: flex;
 }
 
 .my-image {
   width: 100%;
-  height: auto;
-  margin: auto;
-  padding-bottom: 20px;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.about-content {
+  padding: 24px;
+  display: grid;
+  gap: 14px;
 }
 
 .about-me-sub-heading {
-  font-size: 18px;
-  color: var(--muted);
-  font-weight: 700;
+  font-size: 20px;
+  color: var(--text);
 }
 
 .about-me-description {
   font-size: 16px;
-  margin-top: 18px;
-  color: var(--muted);
-  line-height: 1.6;
+  color: var(--text-muted);
+  line-height: 1.7;
 }
 
-@media (max-width: 768px) {
+.about-highlights {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about-highlights span {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-muted);
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image-wrap {
+    max-width: 320px;
+    display: block;
+  }
+
   .my-image {
-    width: 260px;
     height: auto;
   }
-}
-
-.html-word {
-  color: #e34c26;
-}
-
-.css-word {
-  color: #264de4;
-}
-
-.javascript-word {
-  color: #f0db4f;
-}
-
-.java-word {
-  color: #f89820;
-}
-
-.react-word {
-  color: #61dbfb;
-}
-
-.node-word {
-  color: #3c873a;
-}
-
-.mongodb-word {
-  color: #3fa037;
 }

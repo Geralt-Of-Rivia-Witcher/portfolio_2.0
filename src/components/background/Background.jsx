@@ -6,16 +6,12 @@ import "./backgroud.styles.css";
 
 export const Background = () => {
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
-  }, []);
+  const particlesLoaded = useCallback(async () => {}, []);
+
+  const isMobile = window.innerWidth < 768;
   return (
     <>
       <Particles
@@ -27,12 +23,12 @@ export const Background = () => {
           fpsLimit: 60,
           interactivity: {
             events: {
-              onClick: { enable: true, mode: "push" },
-              onHover: { enable: true, mode: "repulse" },
+              onClick: { enable: false, mode: "push" },
+              onHover: { enable: !isMobile, mode: "repulse" },
               resize: true,
             },
             modes: {
-              push: { quantity: 3 },
+              push: { quantity: 2 },
               repulse: { distance: 160, duration: 0.4 },
             },
           },
@@ -48,15 +44,18 @@ export const Background = () => {
             collisions: { enable: false },
             move: {
               enable: true,
-              speed: 1.6,
+              speed: isMobile ? 0.7 : 1,
               outModes: { default: "out" },
               random: true,
               straight: false,
             },
-            number: { density: { enable: true, area: 900 }, value: 55 },
-            opacity: { value: 0.6 },
-            shape: { type: ["circle", "triangle"] },
-            size: { value: { min: 1, max: 4 } },
+            number: {
+              density: { enable: true, area: 900 },
+              value: isMobile ? 26 : 45,
+            },
+            opacity: { value: 0.4 },
+            shape: { type: ["circle"] },
+            size: { value: { min: 1, max: 3 } },
           },
           detectRetina: true,
         }}
